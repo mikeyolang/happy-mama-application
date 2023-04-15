@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:happy_mama/screens/appointment.dart';
 import 'package:happy_mama/screens/homescreen.dart';
+
+import '../screens/messages_screen.dart';
+import '../screens/settings_screen.dart';
 
 class NavBarRoots extends StatefulWidget {
   const NavBarRoots({super.key});
@@ -15,11 +19,11 @@ class _NavBarRootsState extends State<NavBarRoots> {
     //Home Screen
     HomeScreen(),
     //  Messages Screen
-    Container(),
+    MessagesScreen(),
     //  Schedule Screen
-    Container(),
+    AppointmentsScreen(),
     //  Settings screen
-    Container()
+    SettingsScreen()
   ];
   @override
   Widget build(BuildContext context) {

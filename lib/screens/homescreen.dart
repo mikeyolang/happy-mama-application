@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:happy_mama/screens/appointment.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
@@ -199,7 +200,12 @@ class HomeScreen extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  AppointmentsScreen()));
+              },
               child: Container(
                 margin: const EdgeInsets.all(10),
                 padding: const EdgeInsets.symmetric(vertical: 15),
