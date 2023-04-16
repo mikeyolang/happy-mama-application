@@ -16,7 +16,7 @@ class UpcommingSchedule extends StatelessWidget {
           height: 15,
         ),
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 5),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
@@ -24,7 +24,7 @@ class UpcommingSchedule extends StatelessWidget {
                 BoxShadow(color: Colors.black, blurRadius: 4, spreadRadius: 2)
               ]),
           child: SizedBox(
-            width: MediaQuery.of(context).size.width,
+            width: 500,
             child: Column(children: [
               const ListTile(
                 title: Text(
@@ -34,7 +34,7 @@ class UpcommingSchedule extends StatelessWidget {
                 subtitle: Text("Therapist"),
                 trailing: CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("images/doctor.jpg"),
+                  backgroundImage: AssetImage("images/doctor1.jpg"),
                 ),
               ),
               const Padding(
@@ -47,6 +47,7 @@ class UpcommingSchedule extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
+                  
                   Icon(
                     Icons.calendar_month,
                     color: Colors.black,
@@ -60,9 +61,13 @@ class UpcommingSchedule extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 15,
+              ),
               Row(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
                       Icon(
                         Icons.access_time,
@@ -92,9 +97,13 @@ class UpcommingSchedule extends StatelessWidget {
                         style: TextStyle(color: Colors.black),
                       ),
                     ],
-                  )
+                  ),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row()
             ]),
           ),
         )

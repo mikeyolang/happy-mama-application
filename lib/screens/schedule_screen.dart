@@ -26,6 +26,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      // scrollDirection: Axis.horizontal,
       child: Padding(
         padding: const EdgeInsets.only(top: 40),
         child: Column(
@@ -42,6 +43,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               height: 20,
             ),
             Container(
+              // width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
@@ -59,13 +61,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text(
+                        color:
+                            _buttonIndex == 0 ? Colors.blue : Colors.grey[100],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Text(
                         "Upcoming",
                         style: TextStyle(
-                            color: _buttonIndex == 0
-                                ? Colors.blue
-                                : Colors.transparent,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),
                       ),
@@ -81,13 +84,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text(
+                        borderRadius: BorderRadius.circular(10),
+                        color:
+                            _buttonIndex == 1 ? Colors.blue : Colors.grey[100],
+                      ),
+                      child: const Text(
                         "Completed",
                         style: TextStyle(
-                            color: _buttonIndex == 1
-                                ? Colors.blue
-                                : Colors.transparent,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),
                       ),
@@ -103,13 +107,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text(
+                        borderRadius: BorderRadius.circular(10),
+                        color:
+                            _buttonIndex == 2 ? Colors.blue : Colors.grey[100],
+                      ),
+                      child: const Text(
                         "Cancelled",
                         style: TextStyle(
-                            color: _buttonIndex == 2
-                                ? Colors.blue
-                                : Colors.transparent,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),
                       ),
