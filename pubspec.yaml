@@ -64,6 +64,7 @@ flutter:
     - images/doctor4.jpg
     - images/mom.jpg
     - images/ppd.png
+    - images/ppd1.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:happy_mama/screens/login_screen.dart';
+import 'package:happy_mama/screens/signup.dart';
 import 'package:happy_mama/widgets/nav_roots.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -27,24 +29,19 @@ class WelcomeScreen extends StatelessWidget {
                 },
                 child: const Text(
                   "SKIP",
+                  // textAlign: TextAlign.right,
                   style: TextStyle(
                       color: Colors.blue,
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold),
                 )),
             const SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Image.asset("images/ppd.png"),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
             const Text(
-              "Doctors",
+              "Happy",
               style: TextStyle(
+                  fontFamily: "Times New Roman",
                   color: Colors.blue,
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
@@ -52,16 +49,24 @@ class WelcomeScreen extends StatelessWidget {
                   wordSpacing: 2),
             ),
             const Text(
-              "Appointment",
+              "Mama",
               style: TextStyle(
+                  fontFamily: "Times New Roman",
                   color: Colors.black,
-                  fontSize: 35,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1,
                   wordSpacing: 2),
             ),
             const SizedBox(
               height: 60,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Image.asset("images/ppd1.jpeg"),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -71,6 +76,10 @@ class WelcomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()));
                       // Navigator.push(context, MaterialPageRoute(builder: (builder)))
                     },
                     child: const Padding(
@@ -79,7 +88,7 @@ class WelcomeScreen extends StatelessWidget {
                       child: Text(
                         "Log In",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold),
                       ),
@@ -92,6 +101,10 @@ class WelcomeScreen extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (builder)))
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignUpPage()));
                       },
                       child: const Padding(
                         padding:
@@ -99,7 +112,7 @@ class WelcomeScreen extends StatelessWidget {
                         child: Text(
                           "Sign Up",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 22,
                               fontWeight: FontWeight.bold),
                         ),

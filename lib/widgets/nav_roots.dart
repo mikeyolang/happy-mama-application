@@ -4,6 +4,7 @@ import 'package:happy_mama/screens/appointment.dart';
 import 'package:happy_mama/screens/homescreen.dart';
 
 import '../screens/messages_screen.dart';
+import '../screens/schedule_screen.dart';
 import '../screens/settings_screen.dart';
 
 class NavBarRoots extends StatefulWidget {
@@ -19,11 +20,11 @@ class _NavBarRootsState extends State<NavBarRoots> {
     //Home Screen
     HomeScreen(),
     //  Messages Screen
-    MessagesScreen(),
+    const MessagesScreen(),
     //  Schedule Screen
-    AppointmentsScreen(),
+    const ScheduleScreen(),
     //  Settings screen
-    SettingsScreen()
+    const SettingsScreen()
   ];
   @override
   Widget build(BuildContext context) {

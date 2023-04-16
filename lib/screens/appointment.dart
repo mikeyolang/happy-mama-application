@@ -1,15 +1,12 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentsScreen extends StatelessWidget {
   AppointmentsScreen({super.key});
-  List imgs = [
-    "doctor1.jpg"
-        "doctor2.jpg"
-        "doctor3.jpg"
-        "doctor4.jpg"
-  ];
-
+  List imgs = ["doctor1.jpg", "doctor2.jpg", "doctor3.jpg", "doctor4.jpg"];
+  // int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,6 +95,7 @@ class AppointmentsScreen extends StatelessWidget {
                               height: 5,
                             ),
                             Container(
+                                margin: const EdgeInsets.only(left: 15),
                                 padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     color: Colors.blue.shade200,
@@ -119,9 +117,10 @@ class AppointmentsScreen extends StatelessWidget {
               height: 20,
             ),
             Container(
-              height: MediaQuery.of(context).size.height / 15,
+              // height: MediaQuery.of(context).size.height / 1.5,
+              height: 500,
               width: double.infinity,
-              padding: const EdgeInsets.only(top: 20, left: 15),
+              padding: const EdgeInsets.only(top: 15, left: 15),
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -180,24 +179,27 @@ class AppointmentsScreen extends StatelessWidget {
                       // The Space alignd the next widget to the right
                       const Spacer(),
                       TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "See All",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
-                          ))
+                        onPressed: () {},
+                        child: const Text(
+                          "See All",
+                          style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      )
                     ],
                   ),
                   SizedBox(
                     height: 160,
                     child: ListView.builder(
+                      // shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
                       itemCount: 4,
                       itemBuilder: (context, index) {
                         return Container(
-                          margin: const EdgeInsets.all(10),
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 10),
                           padding: const EdgeInsets.symmetric(vertical: 5),
                           decoration: BoxDecoration(
                               color: Colors.black12,
@@ -206,14 +208,15 @@ class AppointmentsScreen extends StatelessWidget {
                                 BoxShadow(
                                     color: Colors.black12,
                                     blurRadius: 4,
-                                    spreadRadius: 2)
+                                    spreadRadius: 2),
                               ]),
                           child: SizedBox(
-                            width: MediaQuery.of(context).size.width / 1.4,
+                            width: MediaQuery.of(context).size.width / 1.5,
+                            // width: 300,
                             child: Column(
                               children: [
                                 ListTile(
-                                  leading: CircleAvatar(
+                                  leading:  CircleAvatar(
                                     radius: 25,
                                     backgroundImage:
                                         AssetImage("images/${imgs[index]}"),
@@ -246,7 +249,11 @@ class AppointmentsScreen extends StatelessWidget {
                                 const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 10),
                                   child: Text(
-                                      "Many thanks to the Doctor. He is a great professional Doctor. I am very satisfied with the Counselling. I recommend him to everyone."),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    "Many thanks to the Doctor. He is a great professional Doctor. I am very satisfied with the Counselling. I recommend him to everyone.",
+                                    style: TextStyle(color: Colors.black),
+                                  ),
                                 )
                               ],
                             ),
@@ -254,8 +261,84 @@ class AppointmentsScreen extends StatelessWidget {
                         );
                       },
                     ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    "Location",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  ListTile(
+                    leading: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.location_on,
+                        color: Colors.blue.shade600,
+                      ),
+                    ),
+                    title: const Text(
+                      "Nairobi, Medical Center",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text("(412)-0789-6474 Kenya"),
                   )
                 ],
+              ),
+            )
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(15),
+        height: 130,
+        decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black12, blurRadius: 4, spreadRadius: 2)
+        ]),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  "Consultation Price",
+                  style: TextStyle(color: Colors.black54),
+                ),
+                Text(
+                  "\$50",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.symmetric(vertical: 18),
+                decoration: BoxDecoration(
+                    color: Colors.blue.shade600,
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Center(
+                    child: Text(
+                  "Book Appointment",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500),
+                )),
               ),
             )
           ],
