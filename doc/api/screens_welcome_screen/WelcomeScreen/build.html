@@ -133,25 +133,19 @@ Widget build(BuildContext context) {
               },
               child: const Text(
                 &quot;SKIP&quot;,
-                textAlign: TextAlign.right,
+                &#47;&#47; textAlign: TextAlign.right,
                 style: TextStyle(
                     color: Colors.blue,
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold),
               )),
           const SizedBox(
             height: 50,
           ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Image.asset(&quot;images&#47;ppd.png&quot;),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
           const Text(
-            &quot;Doctors&quot;,
+            &quot;Happy&quot;,
             style: TextStyle(
+                fontFamily: &quot;Times New Roman&quot;,
                 color: Colors.blue,
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
@@ -159,16 +153,24 @@ Widget build(BuildContext context) {
                 wordSpacing: 2),
           ),
           const Text(
-            &quot;Appointment&quot;,
+            &quot;Mama&quot;,
             style: TextStyle(
+                fontFamily: &quot;Times New Roman&quot;,
                 color: Colors.black,
-                fontSize: 35,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1,
                 wordSpacing: 2),
           ),
           const SizedBox(
             height: 60,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Image.asset(&quot;images&#47;download.jpeg&quot;),
+          ),
+          const SizedBox(
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -178,6 +180,10 @@ Widget build(BuildContext context) {
                 borderRadius: BorderRadius.circular(10),
                 child: InkWell(
                   onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =&gt; const LoginScreen()));
                     &#47;&#47; Navigator.push(context, MaterialPageRoute(builder: (builder)))
                   },
                   child: const Padding(
@@ -186,7 +192,7 @@ Widget build(BuildContext context) {
                     child: Text(
                       &quot;Log In&quot;,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.bold),
                     ),
@@ -199,6 +205,10 @@ Widget build(BuildContext context) {
                   child: InkWell(
                     onTap: () {
                       &#47;&#47; Navigator.push(context, MaterialPageRoute(builder: (builder)))
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =&gt; const SignUpPage()));
                     },
                     child: const Padding(
                       padding:
@@ -206,7 +216,7 @@ Widget build(BuildContext context) {
                       child: Text(
                         &quot;Sign Up&quot;,
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold),
                       ),

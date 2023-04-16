@@ -198,6 +198,7 @@ Widget build(BuildContext context) {
                             height: 5,
                           ),
                           Container(
+                              margin: const EdgeInsets.only(left: 15),
                               padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   color: Colors.blue.shade200,
@@ -219,9 +220,10 @@ Widget build(BuildContext context) {
             height: 20,
           ),
           Container(
-            height: MediaQuery.of(context).size.height &#47; 15,
+            &#47;&#47; height: MediaQuery.of(context).size.height &#47; 1.5,
+            height: 500,
             width: double.infinity,
-            padding: const EdgeInsets.only(top: 20, left: 15),
+            padding: const EdgeInsets.only(top: 15, left: 15),
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -280,24 +282,27 @@ Widget build(BuildContext context) {
                     &#47;&#47; The Space alignd the next widget to the right
                     const Spacer(),
                     TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          &quot;See All&quot;,
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        ))
+                      onPressed: () {},
+                      child: const Text(
+                        &quot;See All&quot;,
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    )
                   ],
                 ),
                 SizedBox(
                   height: 160,
                   child: ListView.builder(
+                    &#47;&#47; shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     itemCount: 4,
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: const EdgeInsets.all(10),
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 10),
                         padding: const EdgeInsets.symmetric(vertical: 5),
                         decoration: BoxDecoration(
                             color: Colors.black12,
@@ -306,14 +311,15 @@ Widget build(BuildContext context) {
                               BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 4,
-                                  spreadRadius: 2)
+                                  spreadRadius: 2),
                             ]),
                         child: SizedBox(
-                          width: MediaQuery.of(context).size.width &#47; 1.4,
+                          width: MediaQuery.of(context).size.width &#47; 1.5,
+                          &#47;&#47; width: 300,
                           child: Column(
                             children: [
                               ListTile(
-                                leading: CircleAvatar(
+                                leading:  CircleAvatar(
                                   radius: 25,
                                   backgroundImage:
                                       AssetImage(&quot;images&#47;${imgs[index]}&quot;),

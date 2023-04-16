@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the GetStarted class, for the Dart programming language.">
-  <title>build method - GetStarted class - getstarted library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the UpcommingSchedule class, for the Dart programming language.">
+  <title>build method - UpcommingSchedule class - upcoming_schedule library - Dart API</title>
 
 
   
@@ -29,8 +29,8 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">happy_mama</a></li>
-    <li><a href="../../screens_getstarted/screens_getstarted-library.html">getstarted</a></li>
-    <li><a href="../../screens_getstarted/GetStarted-class.html">GetStarted</a></li>
+    <li><a href="../../widgets_upcoming_schedule/widgets_upcoming_schedule-library.html">upcoming_schedule</a></li>
+    <li><a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html">UpcommingSchedule</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -98,7 +98,7 @@ and</li>
 <li>any ambient state obtained from the <code>context</code> using
 <a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
 </ul>
-<p>If a widget's <a href="../../screens_getstarted/GetStarted/build.html">build</a> method is to depend on anything else, use a
+<p>If a widget's <a href="../../widgets_upcoming_schedule/UpcommingSchedule/build.html">build</a> method is to depend on anything else, use a
 <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
 <p>See also:</p>
 <ul>
@@ -112,104 +112,110 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Widget build(BuildContext context) {
-  return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 100,
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15),
+    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const Text(
+        &quot;About Doctor&quot;,
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+      ),
+      const SizedBox(
+        height: 15,
+      ),
+      Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: const [
+              BoxShadow(color: Colors.black, blurRadius: 4, spreadRadius: 2)
+            ]),
+        child: SizedBox(
+          width: 500,
+          child: Column(children: [
+            const ListTile(
+              title: Text(
+                &quot;Dr. John Doe&quot;,
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              &#47;&#47;Hello again!
-              const Text(
-                &quot;Happy Mama&quot;,
-                style: TextStyle(
-                    fontFamily: &quot;Times New Roman&quot;,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: Colors.blue),
+              subtitle: Text(&quot;Therapist&quot;),
+              trailing: CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage(&quot;images&#47;doctor1.jpg&quot;),
               ),
-              const SizedBox(
-                height: 100,
-              ),
-              Image.asset(
-                &#39;images&#47;ppd.png&#39;,
-              ),
-              const SizedBox(
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Divider(
+                thickness: 1,
                 height: 20,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    &quot;CONSULT SPECIALIST&quot;,
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    &quot;SECURE AND PRIVATELY&quot;,
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromRGBO(0, 0, 0, 1)),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    &quot;The following provides a visual&quot;,
-                    style: TextStyle(
-                        fontSize: 14, color: Color.fromRGBO(0, 0, 0, 0.319)),
-                  ),
-                  Text(
-                    &quot;overview of the logical operators&quot;,
-                    style: TextStyle(
-                        fontSize: 14, color: Color.fromRGBO(0, 0, 0, 0.319)),
-                  ),
-                  Text(
-                    &quot;using Venn diagrams.&quot;,
-                    style: TextStyle(
-                        fontSize: 14, color: Color.fromRGBO(0, 0, 0, 0.319)),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              Column(
-                children: &lt;Widget&gt;[
-                  MaterialButton(
-                    height: 60,
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: ((context) =&gt; const LoginScreen())));
-                    },
-                    minWidth: double.infinity,
-                    color: const Color.fromRGBO(1, 152, 116, 1),
-                    shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          color: Color.fromRGBO(1, 152, 116, 1),
-                        ),
-                        borderRadius: BorderRadius.circular(25)),
-                    child: const Text(
-                      &#39;GET STARTED&#39;,
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+
+                Icon(
+                  Icons.calendar_month,
+                  color: Colors.black,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  &quot;15&#47;12&#47;2023&quot;,
+                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    Icon(
+                      Icons.access_time,
+                      color: Colors.black,
                     ),
-                  )
-                ],
-              )
-            ],
-          ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      &quot;11:00 AM&quot;,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: const BoxDecoration(
+                          color: Colors.green, shape: BoxShape.circle),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    const Text(
+                      &quot;Confirmed&quot;,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row()
+          ]),
         ),
-      ));
+      )
+    ]),
+  );
 }</code></pre>
 </section>
 
@@ -225,28 +231,28 @@ Widget build(BuildContext context) {
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
   <li><a href="../../index.html">happy_mama</a></li>
-  <li><a href="../../screens_getstarted/screens_getstarted-library.html">getstarted</a></li>
-  <li><a href="../../screens_getstarted/GetStarted-class.html">GetStarted</a></li>
+  <li><a href="../../widgets_upcoming_schedule/widgets_upcoming_schedule-library.html">upcoming_schedule</a></li>
+  <li><a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html">UpcommingSchedule</a></li>
   <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>GetStarted class</h5>
+    <h5>UpcommingSchedule class</h5>
     <ol>
 
-        <li class="section-title"><a href="../../screens_getstarted/GetStarted-class.html#constructors">Constructors</a></li>
-          <li><a href="../../screens_getstarted/GetStarted/GetStarted.html">GetStarted</a></li>
+        <li class="section-title"><a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html#constructors">Constructors</a></li>
+          <li><a href="../../widgets_upcoming_schedule/UpcommingSchedule/UpcommingSchedule.html">UpcommingSchedule</a></li>
 
 
         <li class="section-title inherited">
-          <a href="../../screens_getstarted/GetStarted-class.html#instance-properties">Properties</a>
+          <a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html#instance-properties">Properties</a>
         </li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/key.html">key</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
-        <li class="section-title"><a href="../../screens_getstarted/GetStarted-class.html#instance-methods">Methods</a></li>
-          <li><a href="../../screens_getstarted/GetStarted/build.html">build</a></li>
+        <li class="section-title"><a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html#instance-methods">Methods</a></li>
+          <li><a href="../../widgets_upcoming_schedule/UpcommingSchedule/build.html">build</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget/createElement.html">createElement</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
@@ -257,7 +263,7 @@ Widget build(BuildContext context) {
           <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/toStringShort.html">toStringShort</a></li>
 
-        <li class="section-title inherited"><a href="../../screens_getstarted/GetStarted-class.html#operators">Operators</a></li>
+        <li class="section-title inherited"><a href="../../widgets_upcoming_schedule/UpcommingSchedule-class.html#operators">Operators</a></li>
           <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/operator_equals.html">operator ==</a></li>
 
 

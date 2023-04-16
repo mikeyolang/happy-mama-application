@@ -1,6 +1,9 @@
 # happy_mama
 
 This is a postpartum healthcare mobile application which includes features such as remote consultations, educational resources, and a community forum, improving access to healthcare and support for mothers. The proposed solution aims to create a supportive community and improve health outcomes for mothers during the postpartum period.
+
+Happy Mama is a comprehensive postpartum healthcare mobile application that addresses the unique needs of new mothers. By providing remote consultations, educational resources, and a community forum, the app aims to create a supportive community and improve health outcomes for mothers during the postpartum period.
+
 ## Pages in The Application
 1. Welcome Screen as the first screen to see when the app starts
 2. Log in and Sign up screens
@@ -26,4 +29,5 @@ Below are the various steps to run the application
 6. Choose your device on the devices list 
 7. Execute `flutter run` in the terminal to run the project in the mobile phone
 
-For more Documentation got
+# NOTE
+For more Documentation on the project, in the project folder go to `happy_mama/doc/api` and run the `index.html` file in the browser

@@ -121,21 +121,24 @@ Widget build(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               &#47;&#47;Hello again!
-              const Text(
-                &quot;MAVERICKS&quot;,
-                style: TextStyle(
+              const Text(&quot;Happy Mama&quot;,
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
-                    color: Color.fromRGBO(1, 152, 116, 1)),
-              ),
+                    color: Colors.blue,
+                  )),
               const SizedBox(
-                height: 90,
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Image.asset(&quot;images&#47;ppd.png&quot;),
               ),
               Container(
-                height: 606,
+                height: 600,
                 width: 400,
                 decoration: BoxDecoration(
-                  color: const Color.fromRGBO(217, 217, 217, 1),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -143,7 +146,7 @@ Widget build(BuildContext context) {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(
-                      height: 30,
+                      height: 1,
                     ),
                     const Text(&quot;Register With Us!&quot;,
                         style: TextStyle(
@@ -158,7 +161,7 @@ Widget build(BuildContext context) {
                           fontSize: 15,
                         )),
                     const SizedBox(
-                      height: 54,
+                      height: 10,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -178,7 +181,7 @@ Widget build(BuildContext context) {
                       ),
                     ),
                     const SizedBox(
-                      height: 14,
+                      height: 5,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -198,7 +201,7 @@ Widget build(BuildContext context) {
                       ),
                     ),
                     const SizedBox(
-                      height: 14,
+                      height: 5,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -219,7 +222,7 @@ Widget build(BuildContext context) {
                       ),
                     ),
                     const SizedBox(
-                      height: 14,
+                      height: 5,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -239,7 +242,7 @@ Widget build(BuildContext context) {
                       ),
                     ),
                     const SizedBox(
-                      height: 75,
+                      height: 20,
                     ),
 
                     &#47;&#47;sign in button
@@ -248,7 +251,7 @@ Widget build(BuildContext context) {
                       child: Container(
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                            color: const Color.fromRGBO(1, 152, 116, 1),
+                            color: Colors.blue,
                             borderRadius: BorderRadius.circular(15)),
                         child: const Center(
                           child: Text(
@@ -261,7 +264,7 @@ Widget build(BuildContext context) {
                       ),
                     ),
                     const SizedBox(
-                      height: 5,
+                      height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -274,7 +277,7 @@ Widget build(BuildContext context) {
                           &quot; Sign In&quot;,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(1, 152, 116, 1)),
+                              color: Colors.blue),
                         ),
                       ],
                     )
