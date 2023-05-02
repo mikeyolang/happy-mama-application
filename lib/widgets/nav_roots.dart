@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:happy_mama/screens/appointment.dart';
 import 'package:happy_mama/screens/homescreen.dart';
 
+import '../screens/community_screen.dart';
 import '../screens/messages_screen.dart';
 import '../screens/schedule_screen.dart';
 import '../screens/settings_screen.dart';
@@ -24,7 +24,8 @@ class _NavBarRootsState extends State<NavBarRoots> {
     //  Schedule Screen
     const ScheduleScreen(),
     //  Settings screen
-    const SettingsScreen()
+    const SettingsScreen(),
+    const CommunityScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,10 @@ class _NavBarRootsState extends State<NavBarRoots> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month), label: "Schedule"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings")
+                icon: Icon(Icons.settings), label: "Settings"),
+            // BottomNavigationBarItem(Icon(Icons.people), label: "Community")
+            BottomNavigationBarItem(
+                icon: Icon(Icons.people), label: "Community")
           ],
         ),
       ),

@@ -47,7 +47,6 @@ class UpcommingSchedule extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
-                  
                   Icon(
                     Icons.calendar_month,
                     color: Colors.black,
@@ -103,7 +102,42 @@ class UpcommingSchedule extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Row()
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 150,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 20),
+                    decoration: BoxDecoration(
+                        color: Colors.blue[800],
+                        borderRadius: BorderRadius.circular(10)),
+                    child: const Center(
+                      child: Text(
+                        "Cancel",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 150,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 20),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: const Center(
+                      child: Text(
+                        "Reschedule",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                ),
+              ])
             ]),
           ),
         )
