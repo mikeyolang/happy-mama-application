@@ -22,8 +22,3 @@ The Postpartum Support App is a mobile application built using Flutter to provid
 ![Screenshot 2](path/to/screenshot2.png)
 ![Screenshot 3](path/to/screenshot3.png)
 
-## Getting Started
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/postpartum-support-app.git
