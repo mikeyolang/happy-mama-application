@@ -25,7 +25,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     const ScheduleScreen(),
     //  Settings screen
     const SettingsScreen(),
-    const CommunityScreen(),
+    const CommunityForumUI(),
   ];
   @override
   Widget build(BuildContext context) {

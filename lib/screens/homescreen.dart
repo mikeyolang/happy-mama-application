@@ -17,11 +17,11 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.only(top: 50),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text(
                 "Hi Crystal",
                 style: TextStyle(
@@ -204,7 +204,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>  AppointmentsScreen()));
+                        builder: (context) => AppointmentsScreen()));
               },
               child: Container(
                 margin: const EdgeInsets.all(10),
@@ -230,10 +230,10 @@ class HomeScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Colors.black54),
                     ),
-                    Row(
+                    const Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Icon(
                           Icons.star,
                           color: Colors.amber,

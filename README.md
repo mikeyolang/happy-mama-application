@@ -1,33 +1,29 @@
-# happy_mama
+# Postpartum Support App
 
-This is a postpartum healthcare mobile application which includes features such as remote consultations, educational resources, and a community forum, improving access to healthcare and support for mothers. The proposed solution aims to create a supportive community and improve health outcomes for mothers during the postpartum period.
+![App Logo](path/to/your/logo.png)
 
-Happy Mama is a comprehensive postpartum healthcare mobile application that addresses the unique needs of new mothers. By providing remote consultations, educational resources, and a community forum, the app aims to create a supportive community and improve health outcomes for mothers during the postpartum period.
+## Overview
 
-## Pages in The Application
-1. Welcome Screen as the first screen to see when the app starts
-2. Log in and Sign up screens
-3. Homepage where the User can access a list of doctors and thei ratings and also schedule an appointment
-4. Settings page where the User can change her setting preferences
-5. Messages Page where the user can see her chats
+The Postpartum Support App is a mobile application built using Flutter to provide support and community for mothers experiencing postpartum depression. The app includes features such as a community forum, resources, and real-time chat to create a supportive environment for mothers to connect and share their experiences.
 
-## Requirements
-1. Latest version Android SDK installed in your computer
-2. Latest version of Flutter SDK in your machine
-3. Android Studio
-4. Code editor, preferebly Visual Studio Code and the various flutter and Dart plug in installed
-5. An android phone
+## Features
 
-# Running the Project
+- **Community Forum:** A dedicated space for mothers to share their thoughts, experiences, and support each other.
+- **Real-Time Chat:** Instant messaging functionality to facilitate immediate support and connection between users.
+- **Resources Section:** Curated articles, blogs, and resources related to postpartum depression to provide valuable information.
+- **Mental Health Assessments:** Self-assessment tools to help users gauge their mental health and guide them towards seeking professional help if needed.
+- **User Profiles:** Personalized user profiles with the option for anonymity to respect user privacy.
+- **Push Notifications:** Keep users informed about new posts, messages, and important updates.
+- **Therapist Directory:** Integration with a directory of mental health professionals specializing in postpartum depression.
 
-Below are the various steps to run the application
-1. First Clone the project repository
-2. Open the project in Visual Studio Code or any code editor of your choice
-3. Open the terminal
-4. Run `flutter pub get` to resolve dependecies
-5. Connect your phone and enable USB debugging in your phone(you can also use an android emulator)
-6. Choose your device on the devices list 
-7. Execute `flutter run` in the terminal to run the project in the mobile phone
+## Screenshots
 
-# NOTE
-For more Documentation on the project, in the project folder go to `happy_mama/doc/api` and run the `index.html` file in the browser
+![Screenshot 1](path/to/screenshot1.png)
+![Screenshot 2](path/to/screenshot2.png)
+![Screenshot 3](path/to/screenshot3.png)
+
+## Getting Started
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/postpartum-support-app.git
